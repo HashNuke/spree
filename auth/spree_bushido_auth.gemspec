@@ -2,16 +2,15 @@ version = File.read(File.expand_path("../../SPREE_VERSION", __FILE__)).strip
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_auth'
+  s.name        = 'spree_bushido_auth'
   s.version     = version
-  s.summary     = 'Provides authentication and authorization services for use with Spree.'
-  s.description = 'Required dependancy for Spree'
+  s.summary     = 'Bushido authentication for use with Spree.'
+  s.description = 'Required dependancy for Spree-Bushido'
 
   s.required_ruby_version = '>= 1.8.7'
-  s.author      = 'Sean Schofield'
-  s.email       = 'sean@railsdog.com'
+  s.authors     = ["Akash Manohar J", "Sean Schofield"]
+  s.email       = ["akash@akash.im"]
   s.homepage    = 'http://spreecommerce.com'
-  s.rubyforge_project = 'spree_auth'
 
   s.files        = Dir['LICENSE', 'README.md', 'app/**/*', 'config/**/*', 'lib/**/*', 'db/**/*']
   s.require_path = 'lib'
