@@ -1,7 +1,11 @@
 class User < ActiveRecord::Base
 
-  devise :database_authenticatable, :token_authenticatable, :registerable, :recoverable,
+  if Devise::on_bushido?
+    devise :bushido_authenticatable, :trackable
+  else
+    devise :database_authenticatable, :token_authenticatable, :registerable, :recoverable,
          :rememberable, :trackable, :validatable, :encryptable, :encryptor => "authlogic_sha512"
+  end
 
   has_many :orders
   has_and_belongs_to_many :roles
@@ -80,6 +84,19 @@ class User < ActiveRecord::Base
 
   def self.current=(user)
     Thread.current[:user] = user
+  end
+
+  def bushido_extra_attributes(extra_attributes)
+    extra_attributes.each do |name, value|
+      case name.to_sym
+      when :email
+        self.email = value
+      # when :first_name
+        # self.first_name = value
+      # when :last_name
+        # self.last_name = value
+      end
+    end
   end
 
 end
