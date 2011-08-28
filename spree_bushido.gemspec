@@ -1,9 +1,10 @@
+spree_bushido_version =  File.read(File.expand_path("../SPREE_BUSHIDO_VERSION",__FILE__)).strip
 version = File.read(File.expand_path("../SPREE_VERSION",__FILE__)).strip
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_bushido'
-  s.version     = version
+  s.version     = spree_bushido_version
   s.summary     = 'Bushido version of the full-stack e-commerce framework for Ruby on Rails.'
   s.description = 'Spree is an open source e-commerce framework for Ruby on Rails. This variant of Spree ported to run on Bushido. Join us on the spree-user google group or in #spree on IRC'
 
