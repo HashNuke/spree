@@ -1,4 +1,4 @@
-spree_bushido_version =  File.read(File.expand_path("../SPREE_BUSHIDO_VERSION",__FILE__)).strip
+spree_bushido_version = File.read(File.expand_path("../SPREE_BUSHIDO_VERSION",__FILE__)).strip
 version = File.read(File.expand_path("../SPREE_VERSION",__FILE__)).strip
 
 Gem::Specification.new do |s|
