@@ -1,8 +1,8 @@
-namespace :spree_api do
+namespace :spree_bushido_api do
   desc "Copies all migrations and assets (NOTE: This will be obsolete with Rails 3.1)"
   task :install do
-    Rake::Task['spree_api:install:migrations'].invoke
-    Rake::Task['spree_api:install:assets'].invoke
+    Rake::Task['spree_bushido_api:install:migrations'].invoke
+    Rake::Task['spree_bushido_api:install:assets'].invoke
   end
 
   namespace :install do
