@@ -25,8 +25,8 @@ Gem::Specification.new do |s|
 
   s.add_dependency('spree_core',  version)
   s.add_dependency('spree_bushido_auth', spree_bushido_version)
-  s.add_dependency('spree_bushido_api', version)
+  s.add_dependency('spree_bushido_api', spree_bushido_version)
   s.add_dependency('spree_dash', version)
   s.add_dependency('spree_sample', version)
-  s.add_dependency('spree_bushido_promo', version)
+  s.add_dependency('spree_bushido_promo', spree_bushido_version)
 end
